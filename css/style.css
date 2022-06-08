@@ -1,0 +1,423 @@
+/****** Elad Shechter's RESET *******/
+/*** box sizing border-box for all elements ***/
+
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+button {
+  background-color: transparent;
+  color: inherit;
+  border-width: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+figure {
+  margin: 0;
+}
+
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+ul,
+ol,
+dd {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+p {
+  margin: 0;
+}
+
+cite {
+  font-style: normal;
+}
+
+fieldset {
+  border-width: 0;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Kanit, sans-serif;
+  min-width: 1170px;
+  padding: 0;
+  margin: 0 auto;
+  list-style: none;
+  overflow-x: hidden;
+  color: #666;
+}
+
+.navbar__header {
+  position: relative;
+  width: 100%;
+  height: 75px;
+  display: block;
+  background: rgb(44, 44, 44);
+  box-shadow: 1px 2px 2pxrgba (0, 0, 0, 0.1),
+    inset 0 1px 1pxrgba (255, 255, 255, 0.2);
+  z-index: 99;
+}
+
+.navbar__header ul {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+}
+
+.navbar__header ul li img {
+  width: 120px;
+}
+
+.navbar__header ul li {
+  text-align: center;
+}
+
+.navbar__header ul li a {
+  color: #fff;
+  font-family: "Kanit", sans-serif;
+  display: block;
+  margin-top: 10px;
+}
+
+a:hover{
+  color: #ffc107;
+}
+
+.navbar__header ul li a dd {
+  color: #acbddb;
+  font-size: 10px;
+}
+
+.wrapper__header {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: url(/img/yg-bg-1.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: overlay;
+  color: #fff;
+}
+
+#carousel__img {
+  height: 360px;
+}
+
+.carousel-control-next-icon {
+  background-image: url(/img/icon/right-arrow.png);
+}
+
+.carousel-control-prev-icon {
+  background-image: url(/img/icon/right-arrow.png);
+  transform: scaleX(-1);
+}
+
+.wrapper__container {
+  margin-top: 500px;
+}
+
+.button__rigth {
+  margin-left: -15px;
+}
+
+#status {
+  position: absolute;
+  display: block;
+  top: 80px;
+  right: 50px;
+  width: 280px;
+}
+
+.box__status {
+  color: #fff;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* background-image: url(https://img.gnjoy.in.th/2022/03/GW-Tab-3-update1.png); */
+  /* background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%; */
+  height: auto;
+  padding-bottom: 10px;
+}
+
+.news__box {
+  display: block;
+  width: 300px;
+  height: auto;
+  background-color: rgba(254, 254, 254, 0);
+  box-shadow: 1px 1px 7px 0px rgb(0 0 0 / 19%);
+  text-align: center;
+  padding: 10px 10px;
+  margin: 10px;
+}
+
+.thumb__img {
+  overflow: hidden;
+}
+
+.news__box img {
+  width: 270px;
+  height: auto;
+  -webkit-transition-property: -ms-transform, transform, -webkit-transform;
+  -webkit-transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease;
+  transition-property: -ms-transform, transform, -webkit-transform;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+}
+
+.news__box img:hover {
+  transform: rotate(-10deg) scale(1.3);
+}
+
+.news__title {
+  color: #36a0ca;
+  font-weight: 400;
+  font-size: 16px;
+  margin-top: 0.5rem;
+  overflow: hidden;
+  line-height: 20px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.news__parag {
+  color: #bbb;
+  height: 2.6rem;
+  font-size: 14px;
+  font-weight: 400;
+  overflow: hidden;
+  white-space: normal;
+  text-overflow: ellipsis;
+  margin-top: 0.5rem;
+  margin: 0.5rem;
+}
+
+.news__date__box {
+  color: #666;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.end__f {
+  position: relative;
+  width: 100%;
+  background-color: #666;
+  height: 75px;
+  z-index: 999;
+}
+
+#ranking hr {
+  color: #666;
+  padding: 1px;
+  /* border: 2px solid #2d303d;
+  background-color: #191a21;
+  padding: 15px; */
+}
+
+.body__ranking {
+  /* border: 2px solid #2d303d; */
+  padding: 30px 20px 0px 10px;
+  background-size: cover;
+  background-color: #11121700;
+  position: relative;
+  color: #ffffff;
+  font-weight: 300;
+}
+
+.header__ranking h3 {
+  font-family: "Mitr", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin: 1rem 0px;
+}
+
+.cell-fit {
+  white-space: nowrap;
+  width: 1%;
+}
+
+.icon__ranking {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+}
+
+#footer {
+  position: relative;
+  bottom: 0;
+  margin-top: 20px;
+}
+
+#content {
+  position: relative;
+}
+
+#content figure {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+#content figure .img__botton_r {
+  position: absolute;
+  width: 100%;
+  top: -610px;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+}
+
+.teble__ranking tbody tr td:hover {
+  cursor: pointer;
+  animation: headShake;
+  /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 0.5s;
+  /* don't forget to set a duration! */
+}
+.donate__animetion figure:hover{
+  cursor: pointer;
+  animation: pulse;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+
+.text-success {
+  color: #92e523 !important;
+}
+
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+}
+
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+
+.member__box{
+  box-shadow: 0 0 5px 0px #dadada;
+  padding: 10px;
+  /* opacity: 0.9; */
+  /* transition: ease 0.5s; */
+}
+
+.member__box:hover{
+  opacity: 1;
+}
+
+.donate__table table tbody tr td{
+  font-family: 'Kanit',sans-serif;
+  font-weight: 300;
+  width: 1%;
+  white-space: nowrap;
+}
+.donate__table table thead tr th{
+  font-size: 18px;
+  font-weight: 300;
+    width: 1%;
+  white-space: nowrap;
+  /* text-transform: uppercase; */
+}
+
+
+.donate__table table thead tr th small{
+  color: #ff0000 !important;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.text-orange{
+  color: #f2711c !important;
+}
+
+#particles-js {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+@media (max-width: 1140px) {
+  body,
+  html {
+    width: 1140px;
+    overflow-x: hidden;
+  }
+
+  .news__box {
+    width: 250px;
+  }
+
+  .box__status {
+    display: none;
+  }
+  .pix_diapo {
+    background: transparent;
+    width: 730px !important;
+  }
+}
+
+
+
