@@ -14,13 +14,37 @@
     border-radius: 0px;
 }
 
-@media (min-width: 1140px) {
-    .pix_diapo{
-        width: 100%;
+.pix_diapo a img{
+    width: 100%;
+}
+
+@media (max-width: 1170px) {
+    .slider{
+        position: relative;
+        width: 530px;
+        height: 345px;
+    }
+    
+    .pix_diapo {
+        width: 580px;
+        height: 345px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+    .pix_diapo a img{
+        width: 50%;
+        height: 100%;
+    }
+    #status{
+        display: none;
     }
 
-    .slider{
-        width: 690px;
+    #pix_pag_ul {
+        float: left;
+        margin: 0;
+        padding: 0;
+        margin-left: -2em !important;
     }
 }
 
